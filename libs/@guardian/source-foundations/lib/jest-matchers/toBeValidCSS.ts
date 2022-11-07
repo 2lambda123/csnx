@@ -14,25 +14,26 @@ expect.extend({
 	): jest.CustomMatcherResult {
 		const { isFragment = false } = options;
 
-	// We wrap the CSS in a selector if it is a fragment to ensure it is valid.
-	const finalCSS = isFragment ? `* { ${received} }` : received;
+		// We wrap the CSS in a selector if it is a fragment to ensure it is valid.
+		const finalCSS = isFragment ? `* { ${received} }` : received;
 
-	try {
-		transform({
-			code: Buffer.from(finalCSS, 'utf8'),
-			filename: '',
-		});
+		try {
+			transform({
+				code: Buffer.from(finalCSS, 'utf8'),
+				filename: '',
+			});
 
-		return {
-			pass: true,
-			message: () => '',
-		};
-	} catch (error) {
-		const message = (error as Warning).message;
-		if (!message) throw error;
-		return {
-			pass: false,
-			message: () => message,
-		};
-	}
-};
+			return {
+				pass: true,
+				message: () => '',
+			};
+		} catch (error) {
+			const message = (error as Warning).message;
+			if (!message) throw error;
+			return {
+				pass: false,
+				message: () => message,
+			};
+		}
+	},
+});
