@@ -28,6 +28,9 @@
 			"@guardian/source-react-components-development-kitchen": [
 				"libs/@guardian/source-react-components-development-kitchen/src/index.ts"
 			],
+			"@guardian/source-storybook-config": [
+				"libs/@guardian/source-storybook-config/src/index.ts"
+			],
 			"@guardian/eslint-plugin-source-foundations": [
 				"libs/@guardian/eslint-plugin-source-foundations/src/index.ts"
 			],

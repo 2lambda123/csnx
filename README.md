@@ -25,6 +25,7 @@ The following packages live in `libs/@guardian/*` and are published to NPM:
 - [@guardian/source-foundations](libs/@guardian/source-foundations)
 - [@guardian/source-react-components](libs/@guardian/source-react-components)
 - [@guardian/source-react-components-development-kitchen](libs/@guardian/source-react-components-development-kitchen)
+- [@guardian/source-storybook-config](libs/@guardian/source-storybook-config)
 - [@guardian/tsconfig](libs/@guardian/tsconfig)
 
 <!-- END PUBLISHED_PACKAGES -->

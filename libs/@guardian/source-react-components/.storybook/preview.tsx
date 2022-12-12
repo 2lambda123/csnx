@@ -1,7 +1,9 @@
-import { backgrounds } from './preview/backgrounds';
-import { FocusManagerDecorator } from './preview/FocusManagerDecorator';
-import { ThemeProviderDecorator } from './preview/ThemeProviderDecorator';
-import { viewport } from './preview/viewport';
+import {
+	backgrounds,
+	FocusManagerDecorator,
+	ThemeProviderDecorator,
+	viewport,
+} from '@guardian/source-storybook-config';
 
 export const parameters = {
 	viewport,

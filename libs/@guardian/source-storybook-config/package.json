@@ -1,0 +1,25 @@
+{
+	"name": "@guardian/source-storybook-config",
+	"version": "0.0.1",
+	"homepage": "https://github.com/guardian/csnx/tree/main/libs/@guardian/source-storybook-config#readme",
+	"bugs": {
+		"url": "https://github.com/guardian/csnx/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/guardian/csnx.git"
+	},
+	"license": "MIT",
+	"main": "dist/cjs/index.js",
+	"module": "dist/esm/index.js",
+	"peerDependencies": {
+		"@emotion/react": "^11.0.0",
+		"@guardian/source-foundations": "^7.0.0",
+		"react": "^17.0.1"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"readme": "ERROR: No README data found!",
+	"_id": "@guardian/source-storybook-config@0.0.1"
+}
