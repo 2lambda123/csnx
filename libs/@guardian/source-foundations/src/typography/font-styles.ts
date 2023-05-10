@@ -7,7 +7,7 @@ import {
 	pxTextSizes,
 	remTextSizes,
 	underlineThickness,
-} from './data';
+} from './data.ts';
 import type {
 	Categories,
 	FontScaleArgs,
@@ -16,7 +16,7 @@ import type {
 	Option,
 	TypographyConfiguration,
 	TypographyStyles,
-} from './types';
+} from './types.ts';
 
 const determineFontStyleProperty = (
 	fontStyle: Option<FontStyle>,

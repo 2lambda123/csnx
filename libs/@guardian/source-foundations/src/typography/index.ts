@@ -3,15 +3,15 @@ import {
 	headline as headlineAsObj,
 	textSans as textSansAsObj,
 	titlepiece as titlepieceAsObj,
-} from './api';
-import { fontStyleToStringFunction } from './font-styles';
+} from './api.ts';
+import { fontStyleToStringFunction } from './font-styles.ts';
 import type {
 	BodySizes,
 	HeadlineSizes,
 	TextSansSizes,
 	TitlepieceSizes,
 	TypographyStrFunctions,
-} from './types';
+} from './types.ts';
 
 /**
  * [Storybook](https://guardian.github.io/csnx/?path=/docs/source-foundations_typography--titlepiece) •
@@ -90,7 +90,7 @@ export {
 	fonts,
 	lineHeights,
 	fontWeights,
-} from './data';
+} from './data.ts';
 
 export type {
 	ScaleUnit,
@@ -99,4 +99,4 @@ export type {
 	FontWeight,
 	FontStyle,
 	FontWeightDefinition,
-} from './types';
+} from './types.ts';

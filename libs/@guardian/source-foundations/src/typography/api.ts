@@ -1,4 +1,4 @@
-import { fontStyleFunction } from './font-styles';
+import { fontStyleFunction } from './font-styles.ts';
 import type {
 	BodySizes,
 	HeadlineSizes,
@@ -6,7 +6,7 @@ import type {
 	TitlepieceSizes,
 	TypographyConfiguration,
 	TypographyFunctions,
-} from './types';
+} from './types.ts';
 
 const titlepieceDefaults: TypographyConfiguration = {
 	lineHeight: 'tight',

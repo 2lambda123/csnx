@@ -1,5 +1,5 @@
-import { pxToRem } from '../utils/px-to-rem';
-import type { AvailableFontWeights, ItalicsFontWeights } from './types';
+import { pxToRem } from '../utils/px-to-rem.ts';
+import type { AvailableFontWeights, ItalicsFontWeights } from './types.ts';
 
 /**
  * Pixel size values for each font that we use in the design system.
