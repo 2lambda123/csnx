@@ -1,0 +1,46 @@
+/* These should come from design tokens */
+:root {
+	--space-3: 12px;
+	--space-5: 20px;
+	--color-neutral-86: #dcdcdc;
+}
+
+.c-src-container {
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: var(--space-3);
+	width: 100%;
+	border-color: var(--color-neutral-86);
+}
+
+/* Use native CSS nesting to avoid repetition */
+@media (min-width: 480px) {
+	.c-src-container {
+		padding: 0 var(--space-5);
+	}
+}
+@media (min-width: 740px) {
+	.c-src-container {
+		width: 740px;
+	}
+}
+@media (min-width: 980px) {
+	.c-src-container {
+		width: 980px;
+	}
+}
+@media (min-width: 1140px) {
+	.c-src-container {
+		width: 1140px;
+	}
+}
+@media (min-width: 1140px) {
+	.c-src-container {
+		width: 1140px;
+	}
+}
+@media (min-width: 1300px) {
+	.c-src-container {
+		width: 1300px;
+	}
+}

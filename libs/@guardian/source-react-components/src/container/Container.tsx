@@ -1,8 +1,8 @@
+import './styles.css';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { HTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
 import {
-	container,
 	containerBackground,
 	containerBorderColor,
 	containerSideBorders,
@@ -75,8 +75,8 @@ export const Container = ({
 			{...props}
 		>
 			<div
+				className="c-src-container"
 				css={[
-					container,
 					backgroundColor && containerBackground(backgroundColor),
 					topBorder && containerTopBorder,
 					(sideBorders || border) && containerSideBorders,
