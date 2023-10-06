@@ -2,12 +2,6 @@ import './styles.css';
 import type { EmotionJSX } from '@emotion/react/types/jsx-namespace';
 import type { HTMLAttributes } from 'react';
 import type { Props } from '../@types/Props';
-import {
-	containerBackground,
-	containerBorderColor,
-	containerSideBorders,
-	containerTopBorder,
-} from './styles';
 
 export interface ContainerProps extends HTMLAttributes<HTMLElement>, Props {
 	/**
@@ -62,27 +56,26 @@ export const Container = ({
 	topBorder = false,
 	backgroundColor,
 	borderColor,
-	cssOverrides,
 	children,
 	...props
 }: ContainerProps): EmotionJSX.Element => {
+	const classes = [
+		'c-source-container',
+		(sideBorders || border) && 'c-source-container--side-borders',
+		topBorder && 'c-source-container--top-border',
+	]
+		.filter(Boolean)
+		.join(' ');
+
+	const styles = {
+		'--source-container-border-color': borderColor,
+		'--source-container-background-color': backgroundColor,
+	} as React.CSSProperties;
+
 	return (
-		<Element
-			css={[
-				backgroundColor && containerBackground(backgroundColor),
-				cssOverrides,
-			]}
-			{...props}
-		>
-			<div
-				className="c-src-container"
-				css={[
-					backgroundColor && containerBackground(backgroundColor),
-					topBorder && containerTopBorder,
-					(sideBorders || border) && containerSideBorders,
-					borderColor && containerBorderColor(borderColor),
-				]}
-			>
+		/* TODO: How to handle overrides? */
+		<Element {...props}>
+			<div className={classes} style={styles}>
 				{children}
 			</div>
 		</Element>

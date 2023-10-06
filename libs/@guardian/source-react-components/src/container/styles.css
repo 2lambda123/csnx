@@ -1,46 +1,66 @@
-/* These should come from design tokens */
+/* TODO: These should come from design tokens */
+
 :root {
+	--color-neutral-86: #dcdcdc;
 	--space-3: 12px;
 	--space-5: 20px;
-	--color-neutral-86: #dcdcdc;
+	--breakpoint-mobile-landscape: 480px;
+	--breakpoint-tablet: 780px;
+	--breakpoint-desktop: 980px;
+	--breakpoint-left-col: 1140px;
+	--breakpoint-wide: 1300px;
 }
 
-.c-src-container {
+/* TODO: PostCSS rather than native nesting? https://caniuse.com/css-nesting */
+
+.c-source-container {
 	margin: 0 auto;
 	box-sizing: border-box;
 	padding: var(--space-3);
 	width: 100%;
-	border-color: var(--color-neutral-86);
-}
+	border-color: var(--source-container-border-color, var(--color-neutral-86));
+	background-color: var(--source-container-background-color, initial);
 
-/* Use native CSS nesting to avoid repetition */
-@media (min-width: 480px) {
-	.c-src-container {
+	@media (min-width: 480px) {
 		padding: 0 var(--space-5);
 	}
-}
-@media (min-width: 740px) {
-	.c-src-container {
-		width: 740px;
+	@media (min-width: 740px) {
+		width: var(--breakpoint-tablet);
+	}
+	@media (min-width: 980px) {
+		width: var(--breakpoint-desktop);
+	}
+	@media (min-width: 1140px) {
+		width: var(--breakpoint-left-col);
+	}
+	@media (min-width: 1300px) {
+		width: var(--breakpoint-wide);
 	}
 }
-@media (min-width: 980px) {
-	.c-src-container {
-		width: 980px;
+
+.c-source-container--side-borders {
+	border-left-style: solid;
+	border-right-style: solid;
+	border-left-width: 0;
+	border-right-width: 0;
+
+	@media (min-width: 740px) {
+		width: calc(var(--breakpoint-tablet) + 2px);
+		border-left-width: 1px;
+		border-right-width: 1px;
+	}
+	@media (min-width: 980px) {
+		width: calc(var(--breakpoint-desktop) + 2px);
+	}
+	@media (min-width: 1140px) {
+		width: calc(var(--breakpoint-left-col) + 2px);
+	}
+	@media (min-width: 1300px) {
+		width: calc(var(--breakpoint-wide) + 2px);
 	}
 }
-@media (min-width: 1140px) {
-	.c-src-container {
-		width: 1140px;
-	}
-}
-@media (min-width: 1140px) {
-	.c-src-container {
-		width: 1140px;
-	}
-}
-@media (min-width: 1300px) {
-	.c-src-container {
-		width: 1300px;
-	}
+
+.c-source-container--top-border {
+	border-top-width: 1px;
+	border-top-style: solid;
 }
