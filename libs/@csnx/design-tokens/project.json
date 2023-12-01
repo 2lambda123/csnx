@@ -7,7 +7,7 @@
 		"build": {
 			"executor": "nx:run-commands",
 			"options": {
-				"command": "co build",
+				"command": "node scripts/build-tokens.js",
 				"cwd": "libs/@csnx/design-tokens",
 				"color": true
 			}
