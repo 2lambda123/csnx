@@ -9,7 +9,7 @@ import type {
 	remTitlepieceSizes,
 	textSansSizes,
 	titlepieceSizes,
-} from './data';
+} from './data.ts';
 
 export type ScaleUnit = 'rem' | 'px';
 export type LineHeight = keyof typeof lineHeights;
