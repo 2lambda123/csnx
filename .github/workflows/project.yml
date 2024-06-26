@@ -19,7 +19,7 @@ jobs:
           fallback: ${{ secrets.GITHUB_TOKEN }} # fall back to the default token if the app token is not available
 
       - name: add action
-        uses: actions/add-to-project@v0.5.0
+        uses: actions/add-to-project@v1.0.2
         with:
           # You can target a repository in a different organization
           # to the issue
