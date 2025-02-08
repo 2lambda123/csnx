@@ -62,7 +62,7 @@ jobs:
       # down to business...
       # See https://github.com/github/combine-prs/blob/main/docs/github-app-setup.md
       - name: Use GitHub App Token
-        uses: wow-actions/use-app-token@d7957e08172ca2e8e49b35b8d266ad585885edc7 # pinned to the hash of v2.0.2 to guarantee immutability
+        uses: wow-actions/use-app-token@9e8487c993ab4085b2dd8cb90ab446b6a18cf834 # pinned to the hash of v2.0.2 to guarantee immutability
         id: generate_token
         with:
           app_id: ${{ secrets.GU_CHANGESETS_APP_ID }}
